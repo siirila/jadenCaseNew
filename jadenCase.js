@@ -1,9 +1,23 @@
 function jadenCase() {
+  // getting the text from the input field, set it equal to variable text
   var text = document.getElementById('original').value;
 
-  // getting the text from the input field, set it equal to variable text
 
-    var newText = text;
+  // Create a new empty string
+  var newText = "";
+
+  // step through each character of the input string
+  for (var characterIndex = 0; characterIndex < text.length; characterIndex++) {
+    // For the first character, uppercase that character and write that to the new string
+    if (characterIndex === 0) {
+      newText += text[characterIndex].toUpperCase();
+    } else {
+      // otherwise, write the character at that index to the new string
+      newText += text[characterIndex];
+    }
+  }
+
+
       //create a variable newText.  newText is equal to the result of calling the split method on text, and calling the map
       // method on the resulting array
 

@@ -1,10 +1,9 @@
-
-function jadenCase(text) {
+function jadenCase() {
   var text = document.getElementById('original').value;
 
-  //getting the text from the input field, set it equal to variable text
+  // getting the text from the input field, set it equal to variable text
 
-    var newText = {
+    var newText = text;
       //create a variable newText.  newText is equal to the result of calling the split method on text, and calling the map
       // method on the resulting array
 
@@ -13,8 +12,7 @@ function jadenCase(text) {
 
     //turn the array back into a sentence
 
-    // document.getElementById("editedText").innerHTML = newText;
+    //insert the newText into the document
     document.getElementById("editedText").textContent = newText;
 
-    //insert the newText into the document
-};
+}

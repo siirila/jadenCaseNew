@@ -6,14 +6,22 @@ function jadenCase() {
   // Create a new empty string
   var newText = "";
 
+  // i  t
+  var shouldUpperCase = true;
   // step through each character of the input string
   for (var characterIndex = 0; characterIndex < text.length; characterIndex++) {
+    var character = text[characterIndex];
     // For the first character, uppercase that character and write that to the new string
-    if (characterIndex === 0) {
-      newText += text[characterIndex].toUpperCase();
+    if (character === " ") {
+      newText += character;
+      // for the next character upper case it
+      shouldUpperCase = true;
+    } else if (shouldUpperCase) {
+      newText += character.toUpperCase();
+      shouldUpperCase = false;
     } else {
       // otherwise, write the character at that index to the new string
-      newText += text[characterIndex];
+      newText += character;
     }
   }
 
